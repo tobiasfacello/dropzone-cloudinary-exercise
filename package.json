@@ -1,0 +1,39 @@
+{
+	"name": "cap6",
+	"version": "1.0.0",
+	"main": "index.js",
+	"license": "MIT",
+	"scripts": {
+		"dev:front": "parcel serve ./fe-src/index.html",
+		"build:front": "parcel build ./fe-src/index.html",
+		"dev:back": "nodemon --watch './be-src/api.ts' --exec 'ts-node ./be-src/dev.ts'",
+		"build:back": "tsc",
+		"dev": "concurrently --names 'FRONT,BACK' -c 'bgYellow,bgGreen' 'yarn dev:front' 'yarn dev:back'",
+		"sync:force": "ts-node ./be-src/db/sync.ts"
+	},
+	"dependencies": {
+		"@vaadin/router": "^1.7.4",
+		"bearer-token": "^2.0.2",
+		"body-parser": "^1.20.1",
+		"cloudinary": "^1.33.0",
+		"dotenv": "^16.0.3",
+		"dropzone": "^6.0.0-beta.2",
+		"express": "^4.18.2",
+		"jsonwebtoken": "^9.0.0",
+		"parcel": "^2.8.2",
+		"pg": "^8.8.0",
+		"sequelize": "^6.28.0",
+		"sequelize-cockroachdb": "^6.0.5"
+	},
+	"devDependencies": {
+		"@types/dropzone": "^5.7.4",
+		"@types/express": "^4.17.15",
+		"@types/jsonwebtoken": "^8.5.9",
+		"@types/node": "^18.11.17",
+		"concurrently": "^7.6.0",
+		"cors": "^2.8.5",
+		"nodemon": "^2.0.20",
+		"ts-node": "^10.9.1",
+		"typescript": "^4.9.4"
+	}
+}

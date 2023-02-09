@@ -1,0 +1,22 @@
+:root {
+	--white: #fff;
+	--light: #eee;
+	--dark: #2d2d2d;
+	--black: #111;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	height: 100vh;
+	margin: 0;
+	background-color: var(--black);
+}
+
+.root {
+	width: 100%;
+	height: 100%;
+}

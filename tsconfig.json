@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "strictNullChecks": false
+    },
+    "include": [
+        "fe-src/**/*",
+        "be-src/**/*"
+    ]
+}
